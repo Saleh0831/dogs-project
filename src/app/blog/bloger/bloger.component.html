@@ -1,0 +1,20 @@
+ 
+ <h1 dir="rtl" class="d-flex justify-content-center mt-5 mb-5" >خواهش میخوانم میان نژاد سگ ها جستجو کنید</h1>
+ 
+ <div class="dropdown d-flex justify-content-center mt-5">
+    <button class="btn btn-secondary dropdown-toggle" (click)="showsMenu()" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        جستجو و دریافت با توجه به نژاد
+    </button>
+    <div class="dropdown-menu mt-5" [ngClass]="shows ? 'show':''" aria-labelledby="dropdownMenuButton" style="max-height: 200px; overflow-y: auto;">
+      <a *ngFor="let item of allDogs" class="dropdown-item" (click)="data($event)">{{item}}</a>
+    </div>
+  </div>
+
+  <h2 class="m-b-5" *ngIf="immges">البوم عکس</h2>
+  <br>
+  <div class="d-flex flex-wrap flex-direction-center  justify-content-center">
+  <app-thems *ngFor="let item of immges" [image]="item"></app-thems>
+  </div>
+
+  <div class="" style="height: 50vw;"></div>
+

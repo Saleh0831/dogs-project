@@ -1,0 +1,36 @@
+<!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm py-3 py-lg-0 px-3 px-lg-0">
+    <a *ngIf="!tess" routerLink="/sigup" class="navbar-brand ms-lg-5">
+        <h1 class="m-0 text-uppercase text-dark"><i class="bi bi-person fs-1 text-primary me-3"></i>احراز هویت</h1>
+    </a>
+    <a (click)="click2()" *ngIf="tess" routerLink="/" class="navbar-brand ms-lg-5">
+        <h1 class="m-0 text-uppercase text-dark"><i class="bi bi-person fs-1 text-primary me-3"></i>خروج</h1>
+    </a>
+    <!-- <a (click)="logout()" *ngIf="authen" routerLink="/" class="navbar-brand ms-lg-5">
+        <h1  class="m-0 text-uppercase text-dark"><i class="bi bi-person fs-1 text-primary me-3"></i>خروج از حساب</h1>
+    </a> -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto py-0">
+            <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"
+                class="nav-item nav-link">خانه</a>
+            <a routerLink="/about" routerLinkActive="active" class="nav-item nav-link">درباره</a>
+            <a routerLink="/galary" routerLinkActive="active" class="nav-item nav-link">گالری</a>
+            <a routerLink="/blog" routerLinkActive="active" class="nav-item nav-link">بلاگ</a>
+            <div class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" style="text-transform: uppercase;" (click)="onClick()">پیج</a>
+                <div class="dropdown-menu m-0" [ngClass]="show ? 'show':''">
+                    <a routerLink="/search" (click)="onClick()" class="dropdown-item">search</a>
+                    <a routerLink="/sigup" (click)="onClick()" class="dropdown-item">sigup</a>
+                    <a routerLink="/sigup" (click)="onClick()" class="dropdown-item">sigup</a>
+                    <a routerLink="/blog" (click)="onClick()" class="dropdown-item">Blog Grid</a>
+                    <a routerLink="/galary" (click)="onClick()" class="dropdown-item">Galary</a>
+                </div>
+            </div>
+            <a routerLink="/search" class="nav-item nav-link nav-contact bg-primary text-white px-5 ms-lg-5">جستجو در
+                ویکی <i class="bi bi-arrow-right"></i></a>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,75 @@
+.blog__page {
+	padding: 90px 0 55px;
+}
+
+@media (max-width: 576px) {
+	.blog__page {
+		padding: 30px 0 55px;
+	}
+}
+
+.blog__warp {
+	max-width: 1570px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+.blog__item {
+	height: 370px;
+	position: relative;
+	margin-bottom: 30px;
+	background-position: center;
+}
+
+.blog__item.blog__item--long {
+	height: 770px;
+}
+
+.blog__item::after {
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(43%, rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.49)));
+	background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 43%, rgba(0, 0, 0, 0.49) 100%);
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 43%, rgba(0, 0, 0, 0.49) 100%);
+}
+
+@media (max-width: 576px),
+only screen and (min-width: 576px) and (max-width: 767px) {
+	.blog__item h3 {
+		font-size: 22px;
+	}
+}
+
+.blog__content {
+	position: absolute;
+	bottom: 30px;
+	padding: 0 30px;
+	z-index: 2;
+}
+
+.blog__content h4 {
+	font-size: 22px;
+}
+
+.blog__content h4 a {
+	color: #fff;
+}
+
+.blog__date {
+	font-size: 12px;
+	font-weight: 700;
+	color: #fff;
+	margin-bottom: 10px;
+}
+
+.log {
+	width: 100%;
+	height: 200px;
+	background-size: cover;
+	background-position: center;
+	background-image:url("/assets/img/blog-1.jpg")
+}

@@ -1,0 +1,44 @@
+<div class="container-fluid py-5">
+    <div class="container">
+      <div class="row gx-5">
+        <div class="col-lg-5 mb-5 mb-lg-0" style="min-height: 500px;">
+          <div class="position-relative h-100">
+            <img class="position-absolute w-100 h-100 rounded" src="assets/img/about.jpg" style="object-fit: cover;">
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <div class="border-start border-5 border-primary ps-5 mb-5">
+            <h6 class="text-primary text-uppercase">درباره پروژه</h6>
+            <h1 class="display-5 text-uppercase mb-0">ما حیوانات خانگی شما را همیشه شاد نگه می داریم</h1>
+          </div>
+          <h4 dir="rtl" class="text-body mb-4">اصلاعات این بخش به کمک api ویکی پدیا یا mediawiki  گرفته شده است</h4>
+          <div class="bg-light p-4">
+            <ul class="nav nav-pills justify-content-between mb-3" id="pills-tab" role="tablist">
+              <li class="nav-item w-50" role="presentation">
+                <button class="nav-link text-uppercase w-100" [ngClass]="corre ? '' : 'active'" id="pills-1-tab"
+                  data-bs-toggle="pill" data-bs-target="#pills-1" type="button" role="tab" aria-controls="pills-1"
+                  aria-selected="true" (click)="changeDog()">
+                  سگ ها</button>
+              </li>
+              <li class="nav-item w-50" role="presentation">
+                <button class="nav-link text-uppercase w-100" [ngClass]="corre ? 'active' : ''" id="pills-2-tab"
+                  data-bs-toggle="pill" data-bs-target="#pills-2" type="button" role="tab" aria-controls="pills-2"
+                  aria-selected="false" (click)="changeWolf()">
+                  گرگ ها</button>
+              </li>
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+              <div *ngIf="!corre" class="tab-pane fade show active" id="pills-1" role="tabpanel"
+                aria-labelledby="pills-1-tab">
+                <p class="mb-0">{{dataIndexDog}}</p>
+              </div>
+              <div *ngIf="corre" class="tab-pane fade show active" id="pills-2" role="tabpanel"
+                aria-labelledby="pills-2-tab">
+                <p class="mb-0">{{dataIndexWolf}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

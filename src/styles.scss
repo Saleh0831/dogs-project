@@ -45,3 +45,37 @@ $link-decoration: none;
 body {
     font-family: 'myCustomFont',Arial, Helvetica, sans-serif;
 }
+
+.btn-lightbox-carousel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+    width: 8%;
+    height: 8%;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    background: 0 0;
+    border: 0;
+    cursor: pointer;
+}
+.close-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0;
+    color: #fff;
+    background: 0 0;
+    border: 0;
+    cursor: pointer;
+    width: 7%;
+    height: 10%;
+    z-index: 2;
+
+
+    .fa-times{
+        font-size: 25px;
+    }
+}

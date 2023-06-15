@@ -27,6 +27,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { ParentAlbumComponent } from './galary/parent-album/parent-album.component';
 
 
 @NgModule({
@@ -47,6 +48,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
     SiginComponent,
     SigupComponent,
     HouseComponent,
+    ParentAlbumComponent,
     
   ],
   imports: [

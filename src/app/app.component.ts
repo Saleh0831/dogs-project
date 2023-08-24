@@ -14,6 +14,7 @@ export class AppComponent  implements OnInit {
     this.cookieValue = this.cookieService.get('esohp-cookie');
   }
   ngOnInit(): void {
+    alert('این سایت از api خارجی استفاده میکند لطفا فیلتر شکن خود را روشن کنید');
     if(this.cookieValue){
       this.authService.setCurrentUser(true);
     }
